@@ -180,69 +180,68 @@
 
         <h1>表單範例</h1>
 
-
-
         <form action="/action_page.php">
 
-                <div>
-                    <label for="fname">名字：</label>
-                    <input type="text" id="fname" name="fname" value="Leo">
-                </div>
-                
-                <div>
-                    <label for="lname">姓氏：</label>
-                    <input type="text" id="lname" name="lname" value="Yu">
-                </div>
-
-                <div style="display: inline-flex; align-items: center; gap: 10px;">
-                    <label for="gender">性別：</label>
-                    <input type="radio" id="male" name="gender" value="Male">
-                    <label for="male">男</label>
-                    <input type="radio" id="female" name="gender" value="Female">
-                    <label for="female">女</label>
-                    <input type="radio" id="secret" name="gender" value="Secret">
-                    <label for="secret">保密</label>
-                </div>
-                
-                <div style="display: inline-flex; align-items: center; gap: 10px; width: 100%;">
-                    <label for="birthday" style="white-space: nowrap; margin-bottom: 0;">出生日期：</label>
-                    <input type="date" id="birthday" name="birthday" value="1987-03-03">
-                    <input type="checkbox" id="birthday-secret" name="birthday-secret" value="secret">
-                    <label for="birthday-secret" style="margin-bottom: 0; white-space: nowrap;">保密</label>
-                </div>
-
-                <div style="display: block; width: 100%;">
-                    <label for="methodOfTraffic" style="margin-bottom: 0; white-space: nowrap;">請選擇你的交通工具</label>
-                    <div style="display: flex; align-items: center; gap: 20px; margin-top: 10px;">
-                        <input type="checkbox" id="bicycle" name="methodOfTraffic" style="display: inline-block;">
-                        <label for="bicycle" style="margin-bottom: 0; white-space: nowrap;">I have a bicycle</label>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 20px; margin-top: 10px;">
-                        <input type="checkbox" id="car" name="methodOfTraffic" style="display: inline-block;">
-                        <label for="car" style="margin-bottom: 0; white-space: nowrap;">I have a car</label>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 20px; margin-top: 10px;">
-                        <input type="checkbox" id="bus" name="methodOfTraffic" style="display: inline-block;">
-                        <label for="bus" style="margin-bottom: 0; white-space: nowrap;">I have a bus</label>
-                    </div>
-                </div>
-
-                <div>
-                    <input type="file" id="myfile" name="myfile" value="選擇檔案">
-                </div>
-
-                <div>
-                    <label for="message">備註：</label>
-                    <textarea name="message" rows="10" cols="50" placeholder="請輸入您的備註..."></textarea>
-                </div>
-
-                <br>
-
-                <input type="submit" value="提交">
-
-
-                </form>
+            <div>
+                <label for="fname">名字：</label>
+                <input type="text" id="fname" name="fname" value="Leo">
             </div>
+
+            <div>
+                <label for="lname">姓氏：</label>
+                <input type="text" id="lname" name="lname" value="Yu">
+            </div>
+
+            <div style="display: inline-flex; align-items: center; gap: 10px;">
+                <label for="gender">性別：</label>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">男</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">女</label>
+                <input type="radio" id="secret" name="gender" value="Secret">
+                <label for="secret">保密</label>
+            </div>
+
+            <div style="display: inline-flex; align-items: center; gap: 10px; width: 100%;">
+                <label for="birthday" style="white-space: nowrap; margin-bottom: 0;">出生日期：</label>
+                <input type="date" id="birthday" name="birthday" value="1987-03-03">
+                <input type="checkbox" id="birthday-secret" name="birthday-secret" value="secret">
+                <label for="birthday-secret" style="margin-bottom: 0; white-space: nowrap;">保密</label>
+            </div>
+
+            <div style="display: block; width: 100%;">
+                <label for="methodOfTraffic" style="margin-bottom: 0; white-space: nowrap;">請選擇你的交通工具</label>
+                <div style="display: flex; align-items: center; gap: 20px; margin-top: 10px;">
+                    <input type="checkbox" id="bicycle" name="methodOfTraffic" style="display: inline-block;">
+                    <label for="bicycle" style="margin-bottom: 0; white-space: nowrap;">I have a bicycle</label>
+                </div>
+                <div style="display: flex; align-items: center; gap: 20px; margin-top: 10px;">
+                    <input type="checkbox" id="car" name="methodOfTraffic" style="display: inline-block;">
+                    <label for="car" style="margin-bottom: 0; white-space: nowrap;">I have a car</label>
+                </div>
+                <div style="display: flex; align-items: center; gap: 20px; margin-top: 10px;">
+                    <input type="checkbox" id="bus" name="methodOfTraffic" style="display: inline-block;">
+                    <label for="bus" style="margin-bottom: 0; white-space: nowrap;">I have a bus</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="myfile">附加文件：</label>
+                <input type="file" id="myfile" name="myfile" value="選擇檔案">
+            </div>
+
+            <div>
+                <label for="message">備註：</label>
+                <textarea name="message" rows="10" cols="50" placeholder="請輸入您的備註..."></textarea>
+            </div>
+
+            <br>
+
+            <input type="submit" value="提交">
+
+
+        </form>
+    </div>
 
     <script>
         const birthdayInput = document.getElementById('birthday');
