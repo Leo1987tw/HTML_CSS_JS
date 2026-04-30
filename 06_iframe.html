@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>內嵌框架範例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 20px;
+            align-content: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2em;
+            align-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        iframe {
+            width: 300px;
+            height: 300px;
+            border: none;
+        }
+
+        form {
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <div class="container">
+            <a href="index.html" class="back-link">← 返回首頁</a>
+        </div>
+
+        <h1>內嵌框架範例</h1>
+
+        <p>這是內嵌框架範例。</p>
+
+        
+        <table>
+            <tr>
+                <td width="400px">
+                    <iframe src="./page/starbucks.html" frameborder="0"></iframe>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        
+        <br>
+        <br>
+        <br>
+        
+        <table>
+            <tr>
+                <td width="400px"></td>
+                <td>
+                    <iframe src="./page/pink.html" frameborder="0"></iframe>
+                </td>
+            </tr>
+        </table>
+        
+        <br>
+        <br>
+        <br>
+        
+        <form id="searchForm">
+            <input type="text" name="wordInput" id="wordInput" placeholder="輸入單字，例如: book">
+            <input type="submit" value="search">
+        </form>
+
+        <br>
+        <br>
+        <br>
+
+        <table>
+            <tr>
+                <td width="400px">
+                    <iframe id="dictFrame1" src="https://www.merriam-webster.com/dictionary/apple" frameborder="0"></iframe>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        
+        <br>
+        <br>
+        <br>
+
+        <table>
+            <tr>
+                <td width="400px"></td>
+                <td>
+                    <iframe id="dictFrame2" src="https://zh.wiktionary.org/wiki/apple" frameborder="0"></iframe>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <script>
+        // 抓取 HTML 元素
+        const searchForm = document.getElementById('searchForm');
+        const wordInput = document.getElementById('wordInput');
+        const dictFrame1 = document.getElementById('dictFrame1');
+        const dictFrame2 = document.getElementById('dictFrame2');
+
+        // 監聽表單提交事件
+        searchForm.addEventListener('submit', function (event) {
+            // 阻止表單預設的跳轉行為
+            event.preventDefault();
+
+            // 取得使用者輸入的內容
+            const word = wordInput.value.trim();
+
+            if (word !== "") {
+                // 修改第一個 iframe 的 src (Merriam-Webster)
+                dictFrame1.src = `https://www.merriam-webster.com/dictionary/${word}`;
+
+                // 修改第二個 iframe 的 src (Wiktionary)
+                dictFrame2.src = `https://zh.wiktionary.org/wiki/${word}`;
+            } else {
+                alert("請輸入單字！");
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
