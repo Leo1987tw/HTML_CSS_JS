@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS範例</title>
+    <!-- 外部樣式，優先順序最低 -->
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 20px;
+            align-content: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2em;
+            align-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 💡 統一風格新增部分：讓展示區塊像首頁一樣顯眼 */
+        .outercss, div.css, [style*="color: pink"] {
+            background: white;
+            color: #667eea;
+            margin: 10px auto;
+            padding: 20px;
+            width: 350px;
+            border-radius: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 內部標頭樣式，優先順序次高 */
+        div.css {
+            color: #764ba2; /* 使用紫色調區隔 */
+        }
+        </style>
+</head>
+<body>
+    
+    <div>
+        <div class="container">
+            <a href="index.html" class="back-link">← 返回首頁</a>
+        </div>
+
+        <h1>CSS範例</h1>
+
+        <p>這是CSS範例。</p>
+
+        <div class="outercss">
+            outerstyle
+        </div>
+        <div class="css">
+            innerstyle
+        </div>
+        <!-- 內部樣式，優先順序最高 -->
+        <div style="color: pink;">
+            inlinecss
+        </div>
+    
+    </body>
+</html>
