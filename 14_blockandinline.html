@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>外距與內距</title>
+    <title>區塊與行內</title>
     <style>
         * {
             margin: 0;
@@ -75,52 +75,52 @@
         }
 
         #box1 {
-            margin-left: 100px;
+            display: block;
             background-color: lightcyan;
         }
 
         #box2 {
-            margin-left: 200px;
+            display: inline;
             background-color: lightblue;
         }
 
         #box3 {
-            margin-left: 300px;
+            display: inline-block;
             background-color: lightcoral;
         }
 
         #box4 {
-            margin-left: 400px;
+            display: flex;
             background-color: lightgray;
         }
 
         #box5 {
-            margin-left: 500px;
+            display: inline-flex;
             background-color: lightgreen;
         }
 
         #box6 {
-            margin-left: 500px;
+            display: grid;
             background-color: lightpink;
         }
 
         #box7 {
-            margin-left: 400px;
+            display: inline-grid;
             background-color: lightsalmon;
         }
 
         #box8 {
-            margin-left: 300px;
+            display: contents;
             background-color:  lightseagreen;
         }
 
         #box9 {
-            margin-left: 200px;
+            display: none;
             background-color:  white;
         }
 
         #box10 {
-            margin-left: 100px;
+            display: flow-root;
             background-color: lightskyblue;
         }
 
@@ -142,24 +142,34 @@
     <div class="container">
         <a href="index.html" class="back-link">← 返回首頁</a>
 
-        <h1>外距與內距</h1>
+        <h1>區塊與行內</h1>
         
-        <p>margin 為外距，padding 為內距</p>
+        <p>display屬性中可使用區塊與行內等多種值</p>
 
-        <div class="box" id="box1"></div>
-        <div class="box" id="box2"></div>
-        <div class="box" id="box3"></div>
-        <div class="box" id="box4"></div>
-        <div class="box" id="box5"></div>
-        <div class="box" id="box6"></div>
-        <div class="box" id="box7"></div>
-        <div class="box" id="box8"></div>
-        <div class="box" id="box9"></div>
-        <div class="box" id="box10"></div>
+        <p>display: block;</p>
+        <div class="box" id="box1">Lorem ipsum dolor sit amet.</div>
+        <p>display: inline;</p>
+        <div class="box" id="box2">Lorem ipsum dolor sit amet.</div>
+        <p>display: inline-block;</p>
+        <div class="box" id="box3">Lorem ipsum dolor sit amet.</div>
+        <p>display: flex;</p>
+        <div class="box" id="box4">Lorem ipsum dolor sit amet.</div>
+        <p>display: inline-flex;</p>
+        <div class="box" id="box5">Lorem ipsum dolor sit amet.</div>
+        <p>display: grid;</p>
+        <div class="box" id="box6">Lorem ipsum dolor sit amet.</div>
+        <p>display: inline-grid;</p>
+        <div class="box" id="box7">Lorem ipsum dolor sit amet.</div>
+        <p>display: contents</p>
+        <div class="box" id="box8">Lorem ipsum dolor sit amet.</div>
+        <p>display: none;</p>
+        <div class="box" id="box9">Lorem ipsum dolor sit amet.</div>
+        <p>display: flow-root;(用於避免因為子區塊為float而發生坍塌)</p>
+        <div class="box" id="box10">Lorem ipsum dolor sit amet.</div>
         
-        <div class="boxpadding"><p style="color: blue;">boxsizing: border-box;</p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nihil rerum cum eaque. Corporis tempora quam, fuga illo eos ad eum modi nostrum molestiae officia repudiandae qui, dolorem architecto sit!</div>
+        <div class="boxpadding"><p style="color: blue;">boxsizing="border-box"</p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nihil rerum cum eaque. Corporis tempora quam, fuga illo eos ad eum modi nostrum molestiae officia repudiandae qui, dolorem architecto sit!</div>
 
-        <div class="boxpadding" style="box-sizing: content-box;"><p style="color: blue;">boxsizing: content-box;</p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nihil rerum cum eaque. Corporis tempora quam, fuga illo eos ad eum modi nostrum molestiae officia repudiandae qui, dolorem architecto sit!</div>
+        <div class="boxpadding" style="box-sizing: content-box;"><p style="color: blue;">boxsizing="content-box"</p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nihil rerum cum eaque. Corporis tempora quam, fuga illo eos ad eum modi nostrum molestiae officia repudiandae qui, dolorem architecto sit!</div>
     </div>
     
 </body>
