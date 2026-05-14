@@ -74,66 +74,71 @@
             rotate: 15deg;
         }
 
-        #box1 {
+        div.box1 {
             display: block;
             background-color: lightcyan;
         }
 
-        #box2 {
+        div.box2 {
             display: inline;
             background-color: lightblue;
         }
 
-        #box3 {
+        div.box3 {
             display: inline-block;
             background-color: lightcoral;
         }
 
-        #box4 {
+        div.box4 {
             display: flex;
             background-color: lightgray;
         }
-
-        #box5 {
+        
+        div.box5 {
             display: inline-flex;
             background-color: lightgreen;
         }
-
-        #box6 {
+        
+        div.box6 {
             display: grid;
+            grid-template-columns: repeat(3, 100px);
             background-color: lightpink;
         }
 
-        #box7 {
+        div.box7 {
             display: inline-grid;
+            grid-template-columns: repeat(3, 100px);
             background-color: lightsalmon;
         }
 
-        #box8 {
+        div.box8 {
             display: contents;
             background-color:  lightseagreen;
         }
 
-        #box9 {
+        div.box9 {
+            display: block;
+            background-color: white;
+        }
+
+        .container:hover div.box9 {
             display: none;
             background-color:  white;
         }
 
-        #box10 {
+        div.box10 {
             display: flow-root;
             background-color: lightskyblue;
         }
 
-        .boxpadding {
-            width: 300px;
-            height: 300px;
-            background-color: lightgreen;
-            color: red;
-            /* 向外推 */
-            margin: auto;
-            margin-top: 50px;
-            /* 向內推 */
-            padding: 60px 50px 60px 50px;
+        div.innerbox {
+            display: block;
+            background-color: white;
+        }
+
+        div.boxfloat {
+            float: left;
+            background-color:  white;
         }
     </style>
 </head>
@@ -146,30 +151,64 @@
         
         <p>display屬性中可使用區塊與行內等多種值</p>
 
-        <p>display: block;</p>
-        <div class="box" id="box1">Lorem ipsum dolor sit amet.</div>
-        <p>display: inline;</p>
-        <div class="box" id="box2">Lorem ipsum dolor sit amet.</div>
-        <p>display: inline-block;</p>
-        <div class="box" id="box3">Lorem ipsum dolor sit amet.</div>
-        <p>display: flex;</p>
-        <div class="box" id="box4">Lorem ipsum dolor sit amet.</div>
-        <p>display: inline-flex;</p>
-        <div class="box" id="box5">Lorem ipsum dolor sit amet.</div>
-        <p>display: grid;</p>
-        <div class="box" id="box6">Lorem ipsum dolor sit amet.</div>
-        <p>display: inline-grid;</p>
-        <div class="box" id="box7">Lorem ipsum dolor sit amet.</div>
-        <p>display: contents</p>
-        <div class="box" id="box8">Lorem ipsum dolor sit amet.</div>
-        <p>display: none;</p>
-        <div class="box" id="box9">Lorem ipsum dolor sit amet.</div>
-        <p>display: flow-root;(用於避免因為子區塊為float而發生坍塌)</p>
-        <div class="box" id="box10">Lorem ipsum dolor sit amet.</div>
-        
-        <div class="boxpadding"><p style="color: blue;">boxsizing="border-box"</p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nihil rerum cum eaque. Corporis tempora quam, fuga illo eos ad eum modi nostrum molestiae officia repudiandae qui, dolorem architecto sit!</div>
-
-        <div class="boxpadding" style="box-sizing: content-box;"><p style="color: blue;">boxsizing="content-box"</p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nihil rerum cum eaque. Corporis tempora quam, fuga illo eos ad eum modi nostrum molestiae officia repudiandae qui, dolorem architecto sit!</div>
+        <div class="box box1">Lorem ipsum dolor sit amet.</div>
+        <div class="box box1">Lorem ipsum dolor sit amet.</div>
+        <div class="box box1">Lorem ipsum dolor sit amet.</div>
+        <p>區塊屬性 display: block;</p>
+        <div class="box box2">Lorem ipsum dolor sit amet.</div>
+        <div class="box box2">Lorem ipsum dolor sit amet.</div>
+        <div class="box box2">Lorem ipsum dolor sit amet.</div>
+        <p>行內屬性 display: inline;</p>
+        <div class="box box3">Lorem ipsum dolor sit amet.</div>
+        <div class="box box3">Lorem ipsum dolor sit amet.</div>
+        <div class="box box3">Lorem ipsum dolor sit amet.</div>
+        <p>行內區塊 display: inline-block;</p>
+        <div class="box4">
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <p>彈性盒子 display: flex;(使用彈性盒子就能夠控制子區塊的排列方式，預設為橫著排，即便裡頭是放區塊元素)</p>
+        <div class="box5">
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <p>行內彈性盒子 display: inline-flex;</p>
+        <div class="box6">
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <p>網格屬性 display: grid;</p>
+        <div class="box7">
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+            <div class="box innerbox">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <p>行內網格屬性 display: inline-grid;</p>
+        <div class="box box8">Lorem ipsum dolor sit amet.</div>
+        <p>內文屬性 display: contents(只留內文，外藏區塊性質全部消失)</p>
+        <div class="box box9">Lorem ipsum dolor sit amet.</div>
+        <p>沒有顯示屬性 display: none;(什麼都不顯示，也不會佔空間，網頁互動時會用到，例如滑鼠靠近時區塊會消失)</p>
+        <div class="box10">
+            <div class="box boxfloat">float: left;</div>
+            <div class="box boxfloat">float: left;</div>
+            <div class="box boxfloat">float: left;</div>
+        </div>
+        <p>浮動元素的根屬性 display: flow-root;(用於避免因為子區塊為float而發生坍塌)</p>
     </div>
     
 </body>
