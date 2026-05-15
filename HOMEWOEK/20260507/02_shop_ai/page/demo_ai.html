@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>骨往筋來整復養生中心</title>
+    <style>
+        /* 基礎設定 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f9f7f2; /* 柔和米色背景 */
+            color: #333;
+            line-height: 1.6;
+            font-family: "Microsoft JhengHei", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        
+        /* 標題樣式 */
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 50px;
+            border-bottom: 3px solid #8ba88e; /* 墨綠色裝飾 */
+            padding-bottom: 10px;
+        }
+
+        /* 表格優化為卡片質感 */
+        table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: separate;
+            border-spacing: 0 15px; /* 讓行與行之間有間距 */
+        }
+
+        td {
+            background: white;
+            padding: 20px;
+            border: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        tr:hover td {
+            background-color: #f1f8f1;
+            transform: translateY(-2px);
+        }
+
+        /* 欄位微調 */
+        .column1 {
+            width: 25%;
+            text-align: center;
+            border-radius: 15px 0 0 15px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .column1 img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 2px solid #eee;
+        }
+
+        .column2 {
+            width: 55%;
+            padding: 20px 30px;
+            text-align: justify;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .column2::first-letter {
+            font-size: 1.8rem;
+            color: #8ba88e;
+            font-weight: bold;
+        }
+
+        .column3 {
+            width: 20%;
+            text-align: center;
+            border-radius: 0 15px 15px 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e67e22; /* 暖橘色強調價格 */
+        }
+
+        del {
+            display: block;
+            color: #999;
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+
+        .lastrow {
+            text-align: center;
+            background: #2c3e50 !important;
+            color: #fff !important;
+            border-radius: 10px !important;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* 表單樣式優化 */
+        form {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 50px;
+        }
+
+        fieldset {
+            border: none;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        legend {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            float: left;
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            clear: both;
+        }
+
+        label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="tel"]:focus {
+            outline: none;
+            border-color: #8ba88e;
+            box-shadow: 0 0 5px rgba(139,168,142,0.5);
+            background-color: #fcfdfc;
+        }
+
+        .radio-group {
+            margin: 20px 0;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #8ba88e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #6d8a70;
+        }
+
+        /* 手機版適應 */
+        @media (max-width: 600px) {
+            tr { display: flex; flex-direction: column; margin-bottom: 20px; }
+            td { width: 100% !important; border-radius: 10px !important; }
+            .column1 img { width: 60px; height: 60px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>骨往筋來整復養生中心</h1>
+
+    <table>
+        <tr>
+            <td class="column1">
+                <img src="../images/A.png" alt="方案A">
+                <br>A方案
+            </td>
+            <td class="column2">
+                深層鬆筋解除硬梆梆！半身整復舒緩推拿30分(純手技)
+                <br><small style="color: #666;">專業說明 + 全身肌肉放鬆 + 上/下半身二選一 + 純手技筋膜推拿</small>
+            </td>
+            <td class="column3">
+                <del>$780</del>
+                $488
+            </td>
+        </tr>
+        <tr>
+            <td class="column1">
+                <img src="../images/B.png" alt="方案B">
+                <br>B方案
+            </td>
+            <td class="column2">
+                痠痛僵硬專科！全身整復舒緩推拿60分(純手技)
+                <br><small style="color: #666;">專業說明 + 全身肌肉放鬆 + 骨架平衡調整 + 紅豆熱敷 + 養生薑茶</small>
+            </td>
+            <td class="column3">
+                <del>$1380</del>
+                $798
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="lastrow">
+                📍 地址：105臺北市松山區中正里復興北路179號7樓之三
+            </td>
+        </tr>
+    </table>
+
+    <form>
+        <fieldset>
+            <legend>我要預約</legend>
+            
+            <div class="form-group">
+                <label>您的稱呼：</label>
+                <input type="text" name="name" placeholder="請輸入姓名">
+            </div>
+
+            <div class="form-group">
+                <label>聯絡方式：</label>
+                <input type="tel" name="phonenumber" placeholder="手機或LINE ID">
+            </div>
+
+            <div class="radio-group">
+                <label>選擇方案：</label>
+                <input type="radio" name="type" id="A" value="A"> <label style="display:inline;" for="A">方案A</label>
+                &nbsp;&nbsp;
+                <input type="radio" name="type" id="B" value="B"> <label style="display:inline;" for="B">方案B</label>
+            </div>
+
+            <input type="submit" value="立即預約服務">
+        </fieldset>
+    </form>
+
+</body>
+</html>
