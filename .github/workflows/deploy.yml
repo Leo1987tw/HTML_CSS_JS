@@ -7,24 +7,18 @@ on:
 
 jobs:
   web-deploy:
-    name: 🎉 同步檔案
+    name: 🎉 全自動多專案同步
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 步驟1：取得最新程式碼
       uses: actions/checkout@v4
 
-    - name: 📁 步驟2：自動在遠端主機建立子資料夾
-      uses: garygrossgarten/github-action-ssh@release
-      with:
-        host: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        command: mkdir -p ./htdocs/project-B/
-
-    - name: 📂 步驟3：透過 FTP 同步到 InfinityFree
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: 📂 步驟2：全自動建立多層資料夾並同步
+      uses: wlixcc/SFTP-Deploy-Action@v1.5
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: ./htdocs/HTML_PRACTICE
+        port: 21
+        protocol: ftp
+        remote_path: ./htdocs/HTML_PRACTICE/
