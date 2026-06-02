@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>響應式設計</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        p {
+            margin: auto;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        p.Lorem {
+            top: 0px;
+            left: 0px;
+            width: 400px;
+            height: 400px;
+            margin: 0px;
+            padding: 30px;
+            text-align: justify;
+            background-color: violet;
+        }
+        
+        /* 統一按鈕風格 */
+        .back-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: #f0f0f0;
+        }
+
+        div.box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 800px;
+            height: 800px;
+            margin: auto;
+            padding: 0px;
+            background-color: khaki;
+        }
+
+        @media screen and (min-width: 768px){
+            div.box {
+                background-color: pink;
+            }
+        }
+
+        @media screen and (max-width: 1024px){
+            div.box {
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <a href="./index.html" class="back-link">← 返回首頁</a>
+        
+        <br>
+
+        <a href="./pages/media.html" class="back-link">← 響應式設計的練習</a>
+
+        <h1>響應式設計</h1>
+        
+        <p>根據使用者的硬體不同，而有不同表現方式</p>
+
+        <div class="box">
+            <p class="Lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, illo aspernatur quia eveniet, sed suscipit iusto totam laudantium voluptatum mollitia facere blanditiis! Sunt quas illum animi dolore doloremque ad corporis.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
