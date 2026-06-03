@@ -1,70 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>擬元素範例 - 我的網站</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
-        /* 統一全域設定 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         /* 選取文字時的擬元素範例 */
         ::selection {
             background-color: #764ba2;
             color: white;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 60px 20px;
-        }
-
-        .container {
-            text-align: center;
-            width: 100%;
-            max-width: 900px;
-        }
-
-        h1 {
-            color: white;
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        
-        .back-link {
-            display: inline-block;
-            padding: 12px 25px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 40px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .back-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            background: #f0f0f0;
         }
 
         /* 表格風格統一 */
@@ -89,7 +35,7 @@
         }
 
         /* 擬元素實作：奇數列首字放大並變色 */
-        tr:nth-child(odd) > td::first-letter {
+        tr:nth-child(odd)>td::first-letter {
             font-size: 1.5em;
             font-weight: bold;
             color: #5a67d8;
@@ -111,13 +57,14 @@
         }
     </style>
 </head>
+
 <body>
-    
+
     <div class="container">
         <a href="./index.html" class="back-link">← 返回首頁</a>
 
         <h1>擬元素範例</h1>
-        
+
         <p>
             語法：<code>選擇器::擬元素名稱</code> (通常建議使用雙冒號)<br>
             常用：<code>::before</code>、<code>::after</code>、<code>::first-letter</code>、<code>::selection</code>
@@ -156,6 +103,7 @@
             </tr>
         </table>
     </div>
-    
+
 </body>
+
 </html>

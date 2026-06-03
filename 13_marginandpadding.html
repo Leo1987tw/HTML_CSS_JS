@@ -1,66 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh_TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>外距與內距</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 60px 20px;
-        }
-
-        .container {
-            text-align: center;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        h1 {
-            color: white;
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        
-        /* 統一按鈕風格 */
-        .back-link {
-            display: inline-block;
-            padding: 12px 25px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 40px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .back-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            background: #f0f0f0;
-        }
-        
         div.box {
             width: 100px;
             height: 100px;
@@ -69,7 +15,8 @@
             margin: 10px;
         }
 
-        div.box:hover, .boxpadding:hover {
+        div.box:hover,
+        .boxpadding:hover {
             scale: 110%;
             rotate: 15deg;
         }
@@ -111,12 +58,12 @@
 
         #box8 {
             margin-left: 300px;
-            background-color:  lightseagreen;
+            background-color: lightseagreen;
         }
 
         #box9 {
             margin-left: 200px;
-            background-color:  white;
+            background-color: white;
         }
 
         #box10 {
@@ -137,13 +84,14 @@
         }
     </style>
 </head>
+
 <body>
-    
+
     <div class="container">
         <a href="./index.html" class="back-link">← 返回首頁</a>
 
         <h1>外距與內距</h1>
-        
+
         <p>margin 為外距，padding 為內距</p>
 
         <div class="box" id="box1"></div>
@@ -156,11 +104,20 @@
         <div class="box" id="box8"></div>
         <div class="box" id="box9"></div>
         <div class="box" id="box10"></div>
-        
-        <div class="boxpadding"><p style="color: blue;">boxsizing: border-box;</p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nihil rerum cum eaque. Corporis tempora quam, fuga illo eos ad eum modi nostrum molestiae officia repudiandae qui, dolorem architecto sit!</div>
 
-        <div class="boxpadding" style="box-sizing: content-box;"><p style="color: blue;">boxsizing: content-box;</p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nihil rerum cum eaque. Corporis tempora quam, fuga illo eos ad eum modi nostrum molestiae officia repudiandae qui, dolorem architecto sit!</div>
+        <div class="boxpadding">
+            <p style="color: blue;">boxsizing: border-box;</p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dolorum nihil rerum cum eaque. Corporis tempora quam, fuga illo eos ad eum modi nostrum molestiae officia
+            repudiandae qui, dolorem architecto sit!
+        </div>
+
+        <div class="boxpadding" style="box-sizing: content-box;">
+            <p style="color: blue;">boxsizing: content-box;</p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dolorum nihil rerum cum eaque. Corporis tempora quam, fuga illo eos ad eum modi nostrum molestiae officia
+            repudiandae qui, dolorem architecto sit!
+        </div>
     </div>
-    
+
 </body>
+
 </html>

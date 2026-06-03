@@ -1,66 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh_TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>背景擺放</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 60px 20px;
-        }
-
-        .container {
-            text-align: center;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        h1 {
-            color: white;
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        
-        /* 統一按鈕風格 */
-        .back-link {
-            display: inline-block;
-            padding: 12px 25px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 40px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .back-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            background: #f0f0f0;
-        }
-        
         div.box {
             width: 400px;
             height: 400px;
@@ -99,7 +45,8 @@
 
         div.box5 {
             margin: auto;
-            background-image: url('http://picsum.photos/200/300/');background-attachment: fixed;
+            background-image: url('http://picsum.photos/200/300/');
+            background-attachment: fixed;
         }
 
         div.box6 {
@@ -109,17 +56,18 @@
         }
     </style>
 </head>
+
 <body>
-    
+
     <div class="container">
         <a href="./index.html" class="back-link">← 返回首頁</a>
-        
+
         <br>
 
         <a href="./page/background_practice.html" class="back-link">← 背景擺放練習background-position 的應用</a>
 
         <h1>背景擺放</h1>
-        
+
         <p>這是背景圖片擺放範例(背景連結於可以隨機抽取背景圖片的網站)</p>
 
         <div class="box box1">Lorem ipsum dolor sit amet.</div>
@@ -135,6 +83,7 @@
         <div class="box box6">Lorem ipsum dolor sit amet.</div>
         <p>位置跟著滾軸捲動(預設) background-attachment: scroll;</p>
     </div>
-    
+
 </body>
+
 </html>

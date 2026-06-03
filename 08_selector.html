@@ -1,66 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh_TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>選擇器範例</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 40px 0;
-        }
-
-        .container {
-            text-align: center;
-            width: 100%;
-            max-width: 550px;
-        }
-
-        h1 {
-            color: white;
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2em;
-            margin-bottom: 40px;
-        }
-        
-        .back-link {
-            display: inline-block;
-            padding: 12px 25px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .back-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            background: #f0f0f0;
-        }
-
         /* 💡 統一風格：展示區域容器 */
-        .one, .two, .one ~ div {
+        .one,
+        .two,
+        .one~div {
             background: #ffffff;
             color: #333;
             margin: 20px auto;
@@ -76,44 +26,52 @@
             margin-top: 15px;
             padding: 15px;
             border-radius: 10px;
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .one {
             color: #667eea;
         }
-        
+
         /* 滑鼠移上去會變色 */
         .one:hover {
             background-color: gold;
         }
 
         /* 子代 */
-        .one > div {
-            background-color: #c6ff00; /* 明亮的檸檬綠 */
+        .one>div {
+            background-color: #c6ff00;
+            /* 明亮的檸檬綠 */
         }
+
         /* 所有後代(會把子代給覆蓋掉) */
         .one div {
-            background-color: #ff4081; /* 明亮的桃紅色 */
+            background-color: #ff4081;
+            /* 明亮的桃紅色 */
             color: white;
         }
+
         /* 子代 */
-        .two > div {
-            background-color: #00e5ff; /* 明亮的青藍色 */
+        .two>div {
+            background-color: #00e5ff;
+            /* 明亮的青藍色 */
         }
+
         /* 所有手足 */
-        .one ~ div {
+        .one~div {
             color: #d50000;
             background-color: #e0f7fa;
         }
+
         /* 相鄰手足 */
-        .one + div {
+        .one+div {
             background-color: #eeeeee;
         }
-        </style>
+    </style>
 </head>
+
 <body>
-    
+
     <div>
         <div class="container">
             <a href="./index.html" class="back-link">← 返回首頁</a>
@@ -154,6 +112,7 @@
             </div>
         </div>
     </div>
-    
+
 </body>
+
 </html>

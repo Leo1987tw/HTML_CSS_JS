@@ -1,67 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>屬性選擇器 - 我的網站</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
-        /* 統一全域設定 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* 內容較多，改由頂部開始以便滾動 */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 60px 20px;
-        }
-
-        .container {
-            text-align: center;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        h1 {
-            color: white;
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        
-        /* 統一按鈕風格 */
-        .back-link {
-            display: inline-block;
-            padding: 12px 25px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 40px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .back-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            background: #f0f0f0;
-        }
-
         /* 範例展示區域 */
         .demo-area {
             background: rgba(255, 255, 255, 0.95);
@@ -84,7 +29,8 @@
             width: 100%;
             height: 60px;
             margin-bottom: 15px;
-            background-color: #c7d2fe; /* 預設紫色系（對應主頁） */
+            background-color: #c7d2fe;
+            /* 預設紫色系（對應主頁） */
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -104,16 +50,16 @@
         div[class*="2"] {
             border: 3px solid #5a67d8;
         }
-
     </style>
 </head>
+
 <body>
-    
+
     <div class="container">
         <a href="./index.html" class="back-link">← 返回首頁</a>
 
         <h1>屬性選擇器</h1>
-        
+
         <p>
             用法：<code>選擇器[屬性="值"]</code><br>
             <code>^=</code> 開頭 | <code>$=</code> 結尾 | <code>*=</code> 包含字串<br>
@@ -122,12 +68,13 @@
 
         <div class="demo-area">
             <div class="demo-title">實作效果展示：</div>
-            
+
             <div class="box1">box1 (套用了 [class$="1"])</div>
             <div class="box2">box2 (套用了 [class*="2"])</div>
             <div class="box3">box3 (僅套用 [class*="box"])</div>
         </div>
     </div>
-    
+
 </body>
+
 </html>

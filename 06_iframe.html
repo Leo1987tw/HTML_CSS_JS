@@ -1,63 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh_TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>內嵌框架範例</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            text-align: center;
-            padding: 40px;
-        }
-
-        h1 {
-            color: white;
-            font-size: 3em;
-            margin-bottom: 20px;
-            align-content: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2em;
-            align-content: center;
-            margin-bottom: 40px;
-        }
-        
-        .back-link {
-            display: inline-block;
-            padding: 12px 25px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .back-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
         iframe {
             width: 300px;
             height: 300px;
@@ -70,8 +19,9 @@
         }
     </style>
 </head>
+
 <body>
-    
+
     <div>
         <div class="container">
             <a href="./index.html" class="back-link">← 返回首頁</a>
@@ -81,7 +31,7 @@
 
         <p>這是內嵌框架範例。</p>
 
-        
+
         <table>
             <tr>
                 <td width="400px">
@@ -90,11 +40,11 @@
                 <td></td>
             </tr>
         </table>
-        
+
         <br>
         <br>
         <br>
-        
+
         <table>
             <tr>
                 <td width="400px"></td>
@@ -103,11 +53,11 @@
                 </td>
             </tr>
         </table>
-        
+
         <br>
         <br>
         <br>
-        
+
         <form id="searchForm">
             <input type="text" name="wordInput" id="wordInput" placeholder="輸入單字，例如: book">
             <input type="submit" value="search">
@@ -120,12 +70,13 @@
         <table>
             <tr>
                 <td width="400px">
-                    <iframe id="dictFrame1" src="https://www.merriam-webster.com/dictionary/apple" frameborder="0"></iframe>
+                    <iframe id="dictFrame1" src="https://www.merriam-webster.com/dictionary/apple"
+                        frameborder="0"></iframe>
                 </td>
                 <td></td>
             </tr>
         </table>
-        
+
         <br>
         <br>
         <br>
@@ -145,7 +96,7 @@
         <br>
         <br>
     </div>
-    
+
     <script>
         // 抓取 HTML 元素
         const searchForm = document.getElementById('searchForm');
@@ -172,7 +123,7 @@
             }
         });
     </script>
-    
+
 </body>
 
 </html>

@@ -1,73 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>浮動元素</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 60px 20px;
-        }
-
-        .container {
-            text-align: center;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        h1 {
-            color: white;
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
         p.Lorem {
             text-align: justify;
         }
-        
-        /* 統一按鈕風格 */
-        .back-link {
-            display: inline-block;
-            padding: 12px 25px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 40px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
 
-        .back-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            background: #f0f0f0;
-        }
-        
         div.box {
             margin: 10px;
-            padding: 20px 10px;;
+            padding: 20px 10px;
+            ;
             width: 200px;
             height: 200px;
             position: relative;
@@ -95,27 +42,37 @@
         }
     </style>
 </head>
+
 <body>
-    
+
     <div class="container">
         <a href="./index.html" class="back-link">← 返回首頁</a>
-        
+
         <br>
 
         <a href="./pages/float_practice.html" class="back-link">← 浮動元素float 的練習</a>
 
         <h1>浮動元素</h1>
-        
+
         <p>這是浮動元素範例</p>
 
-        <p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique hic consectetur quas odit? Voluptatem dicta reiciendis error aspernatur aliquam harum odio officia laborum alias? Quis reprehenderit quae velit cum accusamus.</p>
+        <p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique hic consectetur quas odit?
+            Voluptatem dicta reiciendis error aspernatur aliquam harum odio officia laborum alias? Quis reprehenderit
+            quae velit cum accusamus.</p>
         <div class="box box1">浮動在畫面的右邊，下方文字則出現在左邊</div>
-        <p class="Lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum delectus optio assumenda, sit voluptatibus earum iste est nemo ab, a quibusdam ad odio hic provident exercitationem praesentium iusto expedita reprehenderit?</p>
+        <p class="Lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum delectus optio assumenda, sit
+            voluptatibus earum iste est nemo ab, a quibusdam ad odio hic provident exercitationem praesentium iusto
+            expedita reprehenderit?</p>
         <div class="box box2">浮動在畫面的左邊，下方文字則出現在右邊</div>
-        <p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ab accusantium magni vero ratione nesciunt, repellat assumenda expedita ex vitae quos quae debitis pariatur repellendus incidunt beatae fugit dignissimos modi?</p>
+        <p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ab accusantium magni vero
+            ratione nesciunt, repellat assumenda expedita ex vitae quos quae debitis pariatur repellendus incidunt
+            beatae fugit dignissimos modi?</p>
         <div class="box box3">下指令clear: both; 則兩邊都不能夠有浮動元素</div>
-        <p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ab accusantium magni vero ratione nesciunt, repellat assumenda expedita ex vitae quos quae debitis pariatur repellendus incidunt beatae fugit dignissimos modi?</p>
+        <p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ab accusantium magni vero
+            ratione nesciunt, repellat assumenda expedita ex vitae quos quae debitis pariatur repellendus incidunt
+            beatae fugit dignissimos modi?</p>
     </div>
-    
+
 </body>
+
 </html>
