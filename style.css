@@ -80,29 +80,3 @@ td {
     font-size: 1.5em;
     border: 1px solid #c7d2fe;
 }
-
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.nav-links a {
-    display: inline-block;
-    padding: 15px 30px;
-    background: white;
-    color: #667eea;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 600;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-    background: #f0f0f0;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-3px);
-}

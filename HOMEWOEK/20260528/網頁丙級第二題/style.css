@@ -90,5 +90,8 @@ main {
     margin: 0px auto;
     width: 1024px;
     height: 45px;
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+    font-size: 14;
     /* border: 1px solid black; */
 }
