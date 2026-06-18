@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紅綠燈(用foreach)</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 1000px;
+            margin: 50px;
+        }
+
+        .box div {
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        .upper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+            height: 600px;
+            margin: 25px;
+            padding: 100px;
+            border-radius: 50%;
+        }
+
+        .inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .lower {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 600px;
+            height: 200px;
+            margin: 25px;
+            padding: 50px;
+            border-radius: 100px;
+        }
+
+        .light {
+            width: 100px;
+            height: 100px;
+            margin: 50px 25px;
+            border-radius: 50%;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>紅綠燈(用foreach)</h1>
+
+        <div class="box">
+            <div class="upper">
+                <div class="inner"></div>
+            </div>
+            <div class="lower">
+                <div class="light red" data-color="red"></div>
+                <div class="light yellow" data-color="yellow"></div>
+                <div class="light green" data-color="green"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let inner = document.querySelector('.inner');
+        let light = document.querySelectorAll('.light');
+
+        console.log(inner);
+        console.log(light);
+
+        light.forEach(function(item){
+            console.log('item', item);
+            item.addEventListener('click', function(){
+                console.log('this', this);
+                console.log('item', item);
+                let getColor = this.getAttribute('data-color');
+                console.log('getColor', getColor);
+                let temporary = `inner ${getColor}`;
+                console.log('temporary', temporary);
+                inner.setAttribute('class', temporary);
+            });
+        });
+    </script>
+</body>
+</html>

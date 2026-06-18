@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My title</title>
+</head>
+<body>
+    <h1>A heading</h1>
+
+    <a href="">Link text</a>
+</body>
+</html>
+
+<script>
+    let myTitle = document.querySelector('title');
+    let myH1 = document.querySelector('h1');
+    let myA = document.querySelector('a');
+
+    console.log('myTitle', myTitle);
+    console.log('myH1', myH1);
+    console.log('myA', myA);
+    console.log('Window',Window);
+
+    myTitle.addEventListener('click', function(){
+        myTitle.textContent = 'New Title';
+        myH1.textContent = 'New Heading';
+        myA.textContent = 'New Link';
+    });
+
+    myH1.addEventListener('click', function(){
+        myTitle.textContent = 'New Title';
+        myH1.textContent = 'New Heading';
+        myA.textContent = 'New Link';
+    });
+
+    myA.addEventListener('click', function(){
+        myTitle.textContent = 'New Title';
+        myH1.textContent = 'New Heading';
+        myA.textContent = 'New Link';
+    });
+
+    console.log('myTitle', myTitle);
+    console.log('myH1', myH1);
+    console.log('myA', myA);
+    console.log('Window',Window);
+</script>

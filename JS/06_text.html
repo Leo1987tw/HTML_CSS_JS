@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        table {
+            width: 100%;
+            margin: 24px auto;
+            border-collapse: collapse;
+            overflow: hidden;
+            background: rgba(15, 23, 42, 0.72);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+        }
+
+        td {
+            padding: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+        }
+
+        #btn {
+            width: 180px;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>innerText innerHtml textContent</h1>
+
+        <table>
+            <tr>
+                <td>innerText</td>
+                <td>innerHtml</td>
+                <td>textContent</td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="one">one</p>
+                </td>
+                <td>
+                    <p id="two">two</p>
+                </td>
+                <td>
+                    <p id="three">three</p>
+                </td>
+            </tr>
+            <tr>
+                <td>可以用來判斷內容是否為空</td>
+                <td>加入需要渲染的內容</td>
+                <td>只想拿純文字 或者供使用者輸入的內容</td>
+            </tr>
+        </table>
+
+        <button id="btn"></button>
+    </div>
+
+    <script>
+        let text = `
+        Browser inner window width: ${window.innerWidth}px<br>
+        Browser inner window height: ${window.innerHeight}px<br>
+        <div id="myElement">
+        哈囉    <span>臺灣</span>
+        <span style="display: none;">（隱藏內容）</span>
+        </div>
+        `;
+
+        let one = document.getElementById("one");
+        let two = document.getElementById("two");
+        let three = document.getElementById("three");
+        let btn = document.getElementById("btn");
+
+        console.log("one");
+        console.log("two");
+        console.log("three");
+        console.log("btn");
+
+        btn.addEventListener('click', function () {
+            one.innerText = text;
+            two.innerHTML = text;
+            three.textContent = text;
+
+            console.log("one");
+            console.log("two");
+            console.log("three");
+            
+            console.log(one.innerText);
+            console.log(two.innerHTML);
+            console.log(three.textContent);
+        });
+
+        console.log("one");
+        console.log("two");
+        console.log("three");
+
+        console.log(one.innerText);
+        console.log(two.innerHTML);
+        console.log(three.textContent);
+    </script>
+</body>
+
+</html>

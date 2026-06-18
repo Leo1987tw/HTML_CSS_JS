@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 簡單介紹</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
+
+        .white {
+            background-color: white;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>jquery 簡單介紹</h1>
+        <p>jquery 是為了簡化語法及瀏覽器相容性而發展出來的工具</p>
+
+        <a href="./pages/practice_jquery.html">小試身手</a>
+
+        <div class="box white"></div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            const box = $('.box');
+            console.log('box', box);
+
+            box.click(function(){
+                console.log('box click ok', box);
+                box.attr('class', 'box red');
+            })
+        });
+
+        // $(function(){}); $(document).ready(function(){}) 另一種寫法
+    </script>
+</body>
+</html>

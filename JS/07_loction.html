@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>轉址</h1>
+
+        <button id="btn">按我連結外部網址</button>
+    </div>
+
+    <script>
+        let btn = document.getElementById("btn");
+
+        console.log('btn', btn);
+        console.log('window', window);
+        console.log('window.location', window.location);
+
+        btn.addEventListener('click', function(){
+            window.location.href = "https://www.google.com";
+            window.location = "https://www.google.com";
+
+            window.location.assign("https://www.google.com");
+
+            window.location.replace("https://www.google.com");
+        });
+    </script>
+</body>
+</html>

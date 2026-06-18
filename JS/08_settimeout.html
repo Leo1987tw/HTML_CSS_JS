@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 24px;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .button-row button {
+            width: auto;
+            min-width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>Set Timeout</h1>
+
+        <p>
+            setTimeout 可以設定等待固定時間之後執行<br>
+            setInterval 則是重複等待每段時間執行一次<br>
+            clearInterval 取消重複執行時間
+        </p>
+
+        <div class="box green" id="box"></div>
+
+        <div class="button-row">
+            <button id="red">red</button>
+            <button id="green">green</button>
+            <button id="twinkle">twinkle</button>
+            <button id="stop">stop</button>
+        </div>
+    </div>
+
+    <script>
+        let box = document.getElementById("box");
+        let red = document.getElementById("red");
+        let green = document.getElementById("green");
+        let twinkle = document.getElementById("twinkle");
+        let stop = document.getElementById("stop");
+        let twinkleId = null;
+
+        console.log('box', box);
+        console.log('red', red);
+        console.log('green', green);
+        console.log('twinkle', twinkle);
+        console.log('stop', stop);
+        console.log('twinkle', twinkle);
+
+        red.addEventListener("click", () => {
+            window.setTimeout(() => box.setAttribute("class", "box red"), 1000);
+        });
+
+        green.addEventListener("click", () => {
+            window.setTimeout(() => box.setAttribute("class", "box green"), 1000);
+        });
+
+        twinkle.addEventListener("click", () => {
+            box.setAttribute("class", "box green");
+            let isGreen = true;
+            if(twinkleId !== null)return;
+            twinkleId = window.setInterval(() => {
+                if(isGreen){
+                    box.setAttribute("class", "box red");
+                    isGreen = false;
+                }else {
+                    box.setAttribute("class", "box green");
+                    isGreen = true;
+                }
+            }, 500);
+        });
+
+        stop.addEventListener("click", () => {
+            window.clearInterval(twinkleId);
+            twinkleId = null;
+        });
+    </script>
+</body>
+</html>

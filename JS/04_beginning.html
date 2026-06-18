@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>變數宣告與console.log</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>變數宣告與console.log</h1>
+
+        <p>按下F12進入開發者模式。點開Element按鈕旁的Console看輸出情況。</p>
+
+        <p>var與let變數宣告生命週期不同，var以函數做區分，let用括號做區分。</p>
+
+        <a href="./pages/practice.html">小試身手</a>
+    </div>
+
+    <script>
+        let x = 'hello JS';
+        console.log('x', x);
+
+        let sum = 1 + 2;
+        console.log('sum', sum);
+
+        let text = `x => ${x}`;
+        console.log('text', text)
+    </script>
+</body>
+</html>

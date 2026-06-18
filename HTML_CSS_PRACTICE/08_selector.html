@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇器範例</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* 💡 統一風格：展示區域容器 */
+        .one,
+        .two,
+        .one~div {
+            background: #ffffff;
+            color: #333;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* 讓巢狀 div 縮排更有感 */
+        div div {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .one {
+            color: #667eea;
+        }
+
+        /* 滑鼠移上去會變色 */
+        .one:hover {
+            background-color: gold;
+        }
+
+        /* 子代 */
+        .one>div {
+            background-color: #c6ff00;
+            /* 明亮的檸檬綠 */
+        }
+
+        /* 所有後代(會把子代給覆蓋掉) */
+        .one div {
+            background-color: #ff4081;
+            /* 明亮的桃紅色 */
+            color: white;
+        }
+
+        /* 子代 */
+        .two>div {
+            background-color: #00e5ff;
+            /* 明亮的青藍色 */
+        }
+
+        /* 所有手足 */
+        .one~div {
+            color: #d50000;
+            background-color: #e0f7fa;
+        }
+
+        /* 相鄰手足 */
+        .one+div {
+            background-color: #eeeeee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div class="container">
+            <a href="./index.html" class="back-link">← 返回首頁</a>
+        </div>
+
+        <h1>選擇器範例</h1>
+
+        <p>選擇器後面可以接 (>) 子代、(空白) 所有後代、(+) 相鄰手足、(~) 所有手足</p>
+
+        <div class="one">
+            游禮中
+            <div>
+                游禮內
+                <div>
+                    游禮中三世
+                </div>
+            </div>
+            <div>
+                游禮外
+            </div>
+        </div>
+        <div class="two">
+            劉備
+            <div>
+                劉封
+            </div>
+            <div>
+                劉禪
+            </div>
+        </div>
+        <div>
+            關羽
+            <div>
+                關平
+            </div>
+            <div>
+                關興
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

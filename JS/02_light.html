@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紅綠燈</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 1000px;
+            margin: 50px;
+        }
+
+        .box div {
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        .upper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+            height: 600px;
+            margin: 25px;
+            padding: 100px;
+            border-radius: 50%;
+        }
+
+        .inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .lower {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 600px;
+            height: 200px;
+            margin: 25px;
+            padding: 50px;
+            border-radius: 100px;
+        }
+
+        .light {
+            width: 100px;
+            height: 100px;
+            margin: 50px 25px;
+            border-radius: 50%;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>紅綠燈</h1>
+
+        <div class="box">
+            <div class="upper">
+                <div class="inner"></div>
+            </div>
+            <div class="lower">
+                <div class="light red"></div>
+                <div class="light yellow"></div>
+                <div class="light green"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let inner = document.querySelector('.inner');
+        let red = document.querySelector('.red');
+        let yellow = document.querySelector('.yellow');
+        let green = document.querySelector('.green');
+
+        console.log(inner);
+        console.log(red);
+        console.log(yellow);
+        console.log(green);
+
+        red.addEventListener('click', function(){
+            console.log('red ok');
+            inner.setAttribute('class', 'inner red');
+        })
+
+        yellow.addEventListener('click', function(){
+            console.log('yellow ok');
+            inner.setAttribute('class', 'inner yellow');
+        })
+
+        green.addEventListener('click', function(){
+            console.log('green ok');
+            inner.setAttribute('class', 'inner green');
+        })
+    </script>
+</body>
+</html>

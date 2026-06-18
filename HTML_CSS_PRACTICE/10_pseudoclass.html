@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>擬類別範例 - 我的網站</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* 表格風格統一 */
+        table {
+            width: 100%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            /* 稍微帶點透明感 */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: none;
+            /* 改用陰影與圓角呈現，更有現代感 */
+        }
+
+        td {
+            padding: 20px 15px;
+            text-align: center;
+            font-size: 0.95em;
+            border: 1px solid #e2e8f0;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+
+        /* 擬類別實作：隔行變色 */
+        tr:nth-child(even) {
+            background-color: #fff5f7;
+            /* 淺粉色系，呼應你原本的設計但更柔和 */
+        }
+
+        /* 擬類別實作：滑鼠滑過效果 */
+        tr:hover td {
+            background-color: #edf2ff;
+            color: #5a67d8;
+            transition: 0.2s;
+        }
+
+        /* 強調語法格式 */
+        code {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="./index.html" class="back-link">← 返回首頁</a>
+
+        <h1>擬類別範例</h1>
+
+        <p>
+            語法：<code>選擇器:擬類別名稱</code> (冒號兩邊不能有空白)<br>
+            常用：<code>:hover</code>、<code>:nth-child()</code>、<code>:focus</code>、<code>:active</code>
+        </p>
+
+        <table>
+            <tr>
+                <td>這是第 1 行 (奇數)</td>
+                <td>Lorem ipsum dolor sit amet</td>
+                <td>模擬表格數據展示</td>
+            </tr>
+            <tr>
+                <td>這是第 2 行 (偶數)</td>
+                <td>此行套用了 nth-child(even)</td>
+                <td>背景呈現淺粉色</td>
+            </tr>
+            <tr>
+                <td>這是第 3 行 (奇數)</td>
+                <td>Lorem ipsum dolor sit amet</td>
+                <td>滑鼠移上來看看變色</td>
+            </tr>
+            <tr>
+                <td>這是第 4 行 (偶數)</td>
+                <td>此行套用了 nth-child(even)</td>
+                <td>背景呈現淺粉色</td>
+            </tr>
+            <tr>
+                <td>這是第 5 行 (奇數)</td>
+                <td>Lorem ipsum dolor sit amet</td>
+                <td>試試看擬類別的威力</td>
+            </tr>
+            <tr>
+                <td>這是第 6 行 (偶數)</td>
+                <td>此行套用了 nth-child(even)</td>
+                <td>背景呈現淺粉色</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

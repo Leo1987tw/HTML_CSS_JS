@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小試身手</title>
-    <link rel="stylesheet" href="./style.css">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            width: 100%;
+            min-height: 100vh;
+        }
+
         body {
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 24px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: radial-gradient(circle at top left, #7c3aed 0%, #4f46e5 45%, #111827 100%);
             color: #f8fafc;
@@ -26,13 +38,31 @@
             text-align: center;
         }
 
-        .container > div {
+        .container>div {
             margin-top: 18px;
         }
 
-        .container > div:first-child {
+        .container>div:first-child {
             margin-top: 0;
             text-align: left;
+        }
+
+        h1 {
+            margin-bottom: 24px;
+            color: #fff;
+            font-size: clamp(2.2rem, 4vw, 3.8rem);
+            line-height: 1.05;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        a {
+            color: #c4b5fd;
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        a:hover {
+            color: #e0e7ff;
         }
 
         .container a {
@@ -50,6 +80,29 @@
         .container a:hover {
             transform: translateY(-2px);
             box-shadow: 0 16px 26px rgba(0, 0, 0, 0.2);
+        }
+
+        .container button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #4f46e5 100%);
+            color: #ffffff;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 18px 30px rgba(79, 70, 229, 0.24);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+        }
+
+        .container button:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.05);
+            box-shadow: 0 22px 34px rgba(79, 70, 229, 0.28);
         }
 
         .container input {
@@ -74,26 +127,6 @@
             box-shadow: 0 0 0 6px rgba(167, 139, 250, 0.12);
         }
 
-        .container button {
-            width: 100%;
-            padding: 16px 20px;
-            border: none;
-            border-radius: 18px;
-            background: linear-gradient(135deg, #8b5cf6 0%, #4f46e5 100%);
-            color: #ffffff;
-            font-size: 1.05rem;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 18px 30px rgba(79, 70, 229, 0.24);
-            transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
-        }
-
-        .container button:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.05);
-            box-shadow: 0 22px 34px rgba(79, 70, 229, 0.28);
-        }
-
         #total {
             display: inline-block;
             min-height: 1.5em;
@@ -105,8 +138,19 @@
             background: rgba(30, 41, 59, 0.7);
             margin-top: 10px;
         }
+
+        @media (max-width: 680px) {
+            .container {
+                padding: 28px 20px;
+            }
+
+            .container>div:first-child {
+                text-align: center;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div>
@@ -143,7 +187,7 @@
         console.log('button', button);
         console.log('total', total);
 
-        button.addEventListener('click', function(){
+        button.addEventListener('click', function () {
             console.log('button', button);
             let getFirst = first.value;
             let getLast = last.value;
@@ -155,4 +199,5 @@
         });
     </script>
 </body>
+
 </html>

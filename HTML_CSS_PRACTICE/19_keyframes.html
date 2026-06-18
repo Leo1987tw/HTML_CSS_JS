@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>基本動畫</title>
+    <style>
+        p.Lorem {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 400px;
+            height: 400px;
+            margin: 0px;
+            padding: 30px;
+            text-align: justify;
+            background-color: violet;
+        }
+
+        div.anime {
+            position: relative;
+            width: 800px;
+            height: 800px;
+            margin: auto;
+            padding: 0px;
+            background-color: khaki;
+        }
+
+        p.transition {
+            animation-name: Transition;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        p.rotate {
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            animation-name: Rotation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        p.scale {
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            animation-name: Scale;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes Transition {
+            0% {
+                background-color: blue;
+            }
+
+            25% {
+                top: 0px;
+                left: 400px;
+                background-color: yellow;
+            }
+
+            50% {
+                top: 400px;
+                left: 400px;
+                background-color: green;
+            }
+
+            75% {
+                top: 400px;
+                left: 0px;
+                transition: 0px 400px;
+            }
+
+            100% {
+                top: 0px;
+                left: 0px;
+                background-color: pink;
+            }
+        }
+
+        @keyframes Rotation {
+            0% {
+                background-color: pink;
+            }
+
+            50% {
+                color: brown;
+            }
+
+            100% {
+                transform: rotate(360deg);
+                color: pink;
+            }
+        }
+
+        @keyframes Scale {
+            0% {
+                background-color: green;
+            }
+
+            50% {
+                transform: scale(200%);
+                background-color: slateblue;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="./index.html" class="back-link">← 返回首頁</a>
+
+        <br>
+
+        <h1>基本動畫</h1>
+
+        <p>CSS可以用來做簡單的動畫</p>
+
+        <div class="anime">
+            <p class="transition Lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, illo aspernatur
+                quia eveniet, sed suscipit iusto totam laudantium voluptatum mollitia facere blanditiis! Sunt quas illum
+                animi dolore doloremque ad corporis.</p>
+        </div>
+
+        <div class="anime">
+            <p class="rotate Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nisi,
+                voluptate reiciendis quis ipsam nulla veritatis maxime quae voluptas perferendis quod velit rem dolores
+                eos fuga accusamus, doloribus asperiores commodi!</p>
+        </div>
+
+        <div class="anime">
+            <p class="scale Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nisi,
+                voluptate reiciendis quis ipsam nulla veritatis maxime quae voluptas perferendis quod velit rem dolores
+                eos fuga accusamus, doloribus asperiores commodi!</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

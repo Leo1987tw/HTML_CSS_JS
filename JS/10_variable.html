@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>變數宣告</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>變數宣告</h1>
+        <p>JS變數宣告型態常見三種var let const</p>
+
+        <ul>
+            <li>var 變數生命週期針對函數</li>
+            <li>let 變數生命週期針對括號區塊</li>
+            <li>const 變數宣告之後不能改變</li>
+        </ul>
+
+        <div class="box"></div>
+    </div>
+
+    <script>
+        var a = 10;
+        let b = 20;
+        const c = 30;
+
+        if(true){
+            console.log('a', a);
+            console.log('b', b);
+            console.log('c', c);
+            var d = 40;
+            let e = 50;
+            const f = 60;
+        }
+
+        console.log('d', d);
+        console.log('e', e);
+        console.log('f', f);
+
+        const box =document.querySelector(".box");
+        box.setAttribute('class', 'box white');
+        console.log('box', box);
+    </script>
+</body>
+</html>
