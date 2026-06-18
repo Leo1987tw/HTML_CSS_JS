@@ -94,9 +94,9 @@
             console.log('btn', btn);
             console.log('output', output);
 
-            btn.click(function(e){
-                console.log('e', e);
-                e.preventDefault(); //如果用form 表單 可以禁止其送出
+            btn.click(function(event){
+                console.log('event', event);
+                event.preventDefault(); //如果用form 表單 可以禁止其送出
                 console.log('btn click ok', btn);
                 
                 let num1 = Number(one.val());

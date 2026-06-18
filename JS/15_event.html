@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件監聽</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* 基本輸入元件 */
+        .input {
+            display: block;
+            width: min(520px, 100%);
+            margin: 0 auto 18px;
+            padding: 14px 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.08);
+            color: #eef2ff;
+            font-size: 1rem;
+            font-family: "Microsoft JhengHei", "Segoe UI", sans-serif;
+        }
+
+        /* 表格版型 */
+        table {
+            width: min(560px, 100%);
+            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            font-family: "Microsoft JhengHei", "Segoe UI", sans-serif;
+        }
+
+        td {
+            vertical-align: middle;
+            padding: 0;
+        }
+
+        td:first-child {
+            width: 110px;
+            padding-right: 10px;
+            color: #cbd5e1;
+            font-size: 0.98rem;
+            font-weight: 700;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        /* 顯示結果區 */
+        .output {
+            width: 100%;
+            min-height: 62px;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(15, 23, 42, 0.72);
+            color: #f8fafc;
+            font-size: 0.98rem;
+            font-weight: 700;
+            font-family: "Microsoft JhengHei", "Segoe UI", sans-serif;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 18px rgba(15, 23, 42, 0.18);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>事件監聽</h1>
+        <p>利用監聽事件判斷輸入文字是否改變</p>
+
+        <ul>
+            <li>onchange 輸入完成後游標離開時改變</li>
+            <li>oninput 輸入同時改變</li>
+            <li>settimeout 輸入完成後過一秒改變</li>
+        </ul>
+
+        <input type="text" class="input">
+
+        <table>
+            <tr>
+                <td>onchange: </td>
+                <td>
+                    <div class="output onchange"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>oninput: </td>
+                <td>
+                    <div class="output oninput"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>settimeout: </td>
+                <td>
+                    <div class="output timeout"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script>
+        $(function(){
+            const input = $('.input');
+            const onchange = $('.onchange');
+            const oninput = $('.oninput');
+            const timeout = $('.timeout');
+
+            let timer;
+
+            console.log('input', input);
+            console.log('onchange', onchange);
+            console.log('oninput', oninput);
+            console.log('timeout', timeout);
+
+            input.change(function(event){
+                console.log('change ok');
+                console.log('event', event);
+                
+                let getInput = input.val();
+
+                console.log('getInput', getInput);
+                console.log('typeof getInput', typeof (getInput));
+
+                onchange.text(getInput);
+            });
+
+            input.on('input', function(event){
+                console.log('oninput ok');
+                console.log('event', event);
+                
+                let getInput = input.val();
+
+                console.log('getInput', getInput);
+                console.log('typeof getInput', typeof (getInput));
+
+                oninput.text(getInput);
+            });
+
+            input.on('input', function(event){
+                console.log('event', event);
+                
+                clearTimeout(timer);
+                
+                timer = setTimeout(function(){
+                    console.log('ontimeout ok');
+
+                    let getInput = input.val();
+
+                    console.log('getInput', getInput);
+                    console.log('typeof getInput', typeof (getInput));
+
+                    timeout.text(getInput);
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

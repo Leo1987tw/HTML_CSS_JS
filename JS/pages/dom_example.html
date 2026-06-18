@@ -34,7 +34,8 @@
         myA.textContent = 'New Link';
     });
 
-    myA.addEventListener('click', function(){
+    myA.addEventListener('click', function(event){
+        event.preventDefault(); // 不加這個會直接觸發超連結
         myTitle.textContent = 'New Title';
         myH1.textContent = 'New Heading';
         myA.textContent = 'New Link';

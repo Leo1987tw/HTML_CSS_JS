@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX 介紹</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>AJAX 介紹</h1>
+        <p>AJAX 的意思是asynchronous javascript and xml</p>
+
+        <p id="hello">hello</p>
+        <button type="button" onclick='document.getElementById("hello").innerHTML = "Hello, world!"'>Click me!</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+            // $.ajax({
+            //     type: "method",
+            //     url: "url",
+            //     data: "data",
+            //     dataType: "dataType",
+            //     success: function(response){},
+            //     error: function(xht, status, error){}
+            // });
+
+            let data = {
+                money: 50,
+                item: 1
+            };
+
+            $.ajax({
+                type: "get",
+                url: "https://jsonplaceholder.typicode.com/posts/1",
+                data: data,
+                dataType: "json",
+                success: function(response){
+                    console.log('success', response);
+
+                    $('button').click(function(){
+                        $('#hello').text(response.title);
+                    });
+                },
+
+                error: function(xhr, status, error){
+                    console.log('failed: ', error);
+                }
+            });
+
+            // $.get("url", data, function(data, textStatus, jqXHR){}, "dataType");
+
+            // $.getJSON("url", data, function(data, textStatus, jqXHR){});
+
+            // $.post("url", data, function(data, textStatus, jqXHR){}, "dataType");
+
+            // $(selector).load("url", data, function(response, status, request){
+            //     this; // dom element compare with $(this) jquery element
+            // })
+        });
+    </script>
+</body>
+</html>

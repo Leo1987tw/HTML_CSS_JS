@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件切換</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box,
+        .output {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Microsoft JhengHei", "Segoe UI", sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.5;
+            letter-spacing: 0.08em;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        .hide {
+            background-color: green;
+        }
+
+        .show {
+            background-color: blue;
+        }
+
+        .sw {
+            background-color: red;
+        }
+
+        .output {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            background-color: yellow;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="./index.html" class="back-link">返回首頁</a>
+        </div>
+
+        <h1>事件切換</h1>
+        <p>使用toggle 能夠達成切換效果</p>
+
+        <div class="input">
+            <div class="box hide">hide</div>
+            <div class="box show">show</div>
+            <div class="box sw">switch</div>
+        </div>
+
+        <div class="output"></div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script>
+        $(function(){
+            const hide = $('.hide');
+            const show = $('.show');
+            const sw = $('.sw');
+            const output = $('.output');
+
+            console.log('hide', hide);
+            console.log('show', show);
+            console.log('sw', sw);
+            console.log('output', output);
+
+            hide.click(function(){
+                console.log('click hide ok');
+
+                output.hide();
+            });
+
+            show.click(function(){
+                console.log('toggle ok');
+
+                output.show();
+            });
+
+            sw.click(function(){
+                console.log('toggle ok');
+
+                output.toggle();
+            });
+        });
+    </script>
+</body>
+</html>
