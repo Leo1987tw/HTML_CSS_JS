@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的網站</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: #f0f0f0;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div style="text-align: center;">
+            <a href="../index.html" class="back-link">← 返回首頁</a>
+        </div>
+        <h1>歡迎來到我的網站</h1>
+        <p>這是一個簡單的個人網站範例</p>
+        <div class="nav-links">
+            <table>
+                <tr>
+                    <td><a href="./01_my_first_bootstrap.html">Bootstrap範例</a></td>
+                    <td><a href="./02_box.html">Bootstrap區塊範例</a></td>
+                    <td><a href="./03_formatting.html">格式範例</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./04_comment.html">註解範例</a></td>
+                    <td><a href="./05_link.html">超連結範例</a></td>
+                    <td><a href="./06_iframe.html">內嵌框架範例</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./07_div.html">區塊範例</a></td>
+                    <td><a href="./08_selector.html">選擇器範例</a></td>
+                    <td><a href="./09_css.html">CSS範例</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./10_pseudoclass.html">擬類別範例</a></td>
+                    <td><a href="./11_pseudoelement.html">擬元素範例</a></td>
+                    <td><a href="./12_attributeselector.html">屬性選擇器</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./13_marginandpadding.html">外距與內距</a></td>
+                    <td><a href="./14_blockandinline.html">區塊與行內</a></td>
+                    <td><a href="./15_background.html">背景擺放</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./16_float.html">浮動元素</a></td>
+                    <td><a href="./17_position.html">元素位置</a></td>
+                    <td><a href="./18_flex.html">彈性盒子</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./19_keyframes.html">基本動畫</a></td>
+                    <td><a href="./20_media.html">響應式設計</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
