@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh_TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             width: 100%;
             background-color: wheat;
         }
@@ -26,11 +28,13 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin: 0px
-            height: 2000px;
+            margin: 0px height: 2000px;
         }
 
-        .box1, .box2, .box3, .box4 {
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -103,9 +107,31 @@
             height: 200px;
             background-color: lightblue;
         }
+
+        .back-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 1.5rem auto 1.8rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
+
 <body>
+    <div style="text-align: center;">
+        <a href="../18_flex.html" class="back-link">← 返回首頁</a>
+    </div>
 
     <h1>彈性盒子的練習</h1>
 
@@ -130,4 +156,5 @@
         </div>
     </div>
 </body>
+
 </html>

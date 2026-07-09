@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>擬元素範例 - 我的網站</title>
+    <title>擬元素範例</title>
     <link rel="stylesheet" href="./style.css">
     <style>
-        /* 選取文字時的擬元素範例 */
         ::selection {
             background-color: #764ba2;
             color: white;
         }
 
-        /* 表格風格統一 */
         table {
             width: 100%;
             margin: 20px auto;
@@ -34,7 +32,6 @@
             line-height: 1.5;
         }
 
-        /* 擬元素實作：奇數列首字放大並變色 */
         tr:nth-child(odd)>td::first-letter {
             font-size: 1.5em;
             font-weight: bold;
@@ -42,13 +39,11 @@
             margin-right: 2px;
         }
 
-        /* 滑鼠滑過效果 */
         tr:hover td {
             background-color: #f1f3ff;
             transition: 0.2s;
         }
 
-        /* 強調語法格式 */
         code {
             background: rgba(0, 0, 0, 0.2);
             padding: 2px 6px;
@@ -61,7 +56,9 @@
 <body>
 
     <div class="container">
-        <a href="./index.html" class="back-link">← 返回首頁</a>
+        <div style="text-align: center;">
+            <a href="./index.html" class="back-link">← 返回首頁</a>
+        </div>
 
         <h1>擬元素範例</h1>
 

@@ -7,50 +7,14 @@
     <title>表單範例</title>
     <link rel="stylesheet" href="./style.css">
     <style>
-        .container {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            width: 100%;
-            max-width: 500px;
-        }
-
-        h1 {
-            color: #667eea;
-            font-size: 2em;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        p {
-            color: #667eea;
-            font-size: 1.2em;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .back-link {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .back-link:hover {
-            background: #5a67d8;
-            transform: translateY(-2px);
-        }
-
         form {
             display: flex;
             flex-direction: column;
+            padding: 50px;
             gap: 20px;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: white;
         }
 
         label {
@@ -168,8 +132,7 @@
 <body>
 
     <div class="container">
-
-        <div style="text-align: center; margin-bottom: 20px;">
+        <div style="text-align: center;">
             <a href="./index.html" class="back-link">← 返回首頁</a>
         </div>
 
@@ -178,7 +141,6 @@
         <p>這是表單範例。</p>
 
         <form action="/action_page.php">
-
             <div>
                 <label for="fname">名字：</label>
                 <input type="text" id="fname" name="fname" value="Leo">

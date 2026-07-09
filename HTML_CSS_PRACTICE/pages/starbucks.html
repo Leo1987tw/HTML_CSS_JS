@@ -47,12 +47,35 @@
         td {
             width: 15%;
             border: 2px solid black;
-            text-wrap: balance;}
+            text-wrap: balance;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 1.5rem auto 1.8rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 
 <body>
     <div>
+        <div style="text-align: center;">
+            <a href="../05_link.html" class="back-link">← 返回首頁</a>
+        </div>
+
         <h1>星巴克</h1>
         <h2>歡迎來到星巴克</h2>
         <table>

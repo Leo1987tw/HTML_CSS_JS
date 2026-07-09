@@ -7,10 +7,7 @@
     <title>選擇器範例</title>
     <link rel="stylesheet" href="./style.css">
     <style>
-        /* 💡 統一風格：展示區域容器 */
-        .one,
-        .two,
-        .one~div {
+        .one, .two, .one~div {
             background: #ffffff;
             color: #333;
             margin: 20px auto;
@@ -21,7 +18,6 @@
             font-weight: bold;
         }
 
-        /* 讓巢狀 div 縮排更有感 */
         div div {
             margin-top: 15px;
             padding: 15px;
@@ -33,7 +29,6 @@
             color: #667eea;
         }
 
-        /* 滑鼠移上去會變色 */
         .one:hover {
             background-color: gold;
         }
@@ -41,20 +36,17 @@
         /* 子代 */
         .one>div {
             background-color: #c6ff00;
-            /* 明亮的檸檬綠 */
         }
 
         /* 所有後代(會把子代給覆蓋掉) */
         .one div {
             background-color: #ff4081;
-            /* 明亮的桃紅色 */
             color: white;
         }
 
         /* 子代 */
         .two>div {
             background-color: #00e5ff;
-            /* 明亮的青藍色 */
         }
 
         /* 所有手足 */
@@ -72,8 +64,8 @@
 
 <body>
 
-    <div>
-        <div class="container">
+    <div class="container">
+        <div style="text-align: center;">
             <a href="./index.html" class="back-link">← 返回首頁</a>
         </div>
 
