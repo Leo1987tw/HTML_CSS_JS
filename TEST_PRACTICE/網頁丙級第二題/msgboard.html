@@ -1,0 +1,127 @@
+<style>
+    h1 {
+        color: #FF0000;
+        font-weight: bolder;
+    }
+
+    h4 {
+        color: #0000FF;
+    }
+
+    img {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        margin: auto;
+        z-index: -1;
+        transform: translate(-50%, 0%);
+    }
+
+    table{
+        margin: auto;
+        padding: 2px;
+        border: 1px solid #DDDDDD;
+        border-collapse: collapse;
+    }
+
+    td {
+        margin: 0px;
+        border: 1px solid #DDDDDD;
+    }
+
+    td.first {
+        width: 120px;
+        text-align: center;
+    }
+
+    td.second {
+        width: 580px;
+    }
+
+    label {
+        width: 100%;
+        text-align: center;
+    }
+
+    #name {
+        width: 20ch;
+    }
+
+    #email {
+        width: 60ch;
+    }
+</style>
+
+<marquee behavior="" direction="">謝謝蒞臨本網站，請給予我們支持、鼓勵與建言</marquee>
+
+<h1>
+    現在位置：首頁 &gt; 訪客留言
+</h1>
+
+<form action="" id="message" method="post" onsubmit="return show()">
+    <table>
+        <tr>
+            <td class="first">
+                <label for="name" class="">姓　　名</label>
+            </td>
+            <td class="second">
+                <input type="text" id="name">
+            </td>
+        </tr>
+        <tr>
+            <td class="first">
+                <label for="email">電子郵件</label>
+            </td>
+            <td>
+                <input type="text" id="email">
+            </td>
+        </tr>
+        <tr>
+            <td class="first">
+                <label>性　　別</label>
+            </td>
+            <td>
+                <input type="radio" name="gender" id="male">
+                <label for="male">男</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">女</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="first">
+                <label for="career">職業類別</label>
+            </td>
+            <td>
+                <select name="carrer" id="carrer">
+                    <option value="" style="text-align: center;">－請選擇職業類別－</option>
+                    <option value="" style="text-align: center;">1.現役軍人</option>
+                    <option value="" style="text-align: center;">2.專業人員</option>
+                    <option value="" style="text-align: center;">3.技術員及助理專業人員</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="first">
+                <label for="content">留言內容</label>
+            </td>
+            <td>
+                <textarea name="content" id="content" style="width: 78ch; height: 10lh;"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="first">
+                <input type="submit" value="送出">
+                <input type="reset" value="重寫">
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+
+<script>
+    function show(){
+        alert("歡迎蒞臨本網站，您的寶貴意見我們會儘速處理與回覆，謝謝！");
+        document.getElementById("message").reset();
+        return false;
+    }
+</script>

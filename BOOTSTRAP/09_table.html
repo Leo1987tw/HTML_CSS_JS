@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 表格範例</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <a href="./index.html" class="btn btn-outline-secondary mb-4">← 返回前頁</a>
+
+        <div class="text-center mb-5">
+            <p class="text-uppercase text-primary fw-bold mb-2">Bootstrap 表格範例</p>
+            <h1 class="display-6 fw-bold">表格樣式、間距與 hover 效果</h1>
+            <p class="lead text-muted">這裡示範 Bootstrap 的表格主題、欄寬間距與 hover 互動效果。</p>
+        </div>
+
+        <div class="card shadow-sm border-0 p-4 p-md-5">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">姓名</th>
+                            <th scope="col">科目</th>
+                            <th scope="col">分數</th>
+                            <th scope="col">狀態</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Amy</td>
+                            <td>HTML</td>
+                            <td>95</td>
+                            <td><span class="badge text-bg-success">及格</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Ben</td>
+                            <td>CSS</td>
+                            <td>88</td>
+                            <td><span class="badge text-bg-primary">良好</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Chloe</td>
+                            <td>JavaScript</td>
+                            <td>91</td>
+                            <td><span class="badge text-bg-warning text-dark">待加強</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>David</td>
+                            <td>Bootstrap</td>
+                            <td>97</td>
+                            <td><span class="badge text-bg-danger">優秀</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

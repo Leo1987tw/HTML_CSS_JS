@@ -4,84 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的網站</title>
-    <link rel="stylesheet" href="./style.css">
-    <style>
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            display: inline-block;
-            padding: 15px 30px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            font-size: 1.1em;
-            font-weight: 600;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            background: #f0f0f0;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            transform: translateY(-3px);
-        }
-    </style>
+    <title>我的 Bootstrap 網站</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="container">
-        <div style="text-align: center;">
-            <a href="../index.html" class="back-link">← 返回首頁</a>
+<body class="bg-light">
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <p class="text-uppercase text-primary fw-bold mb-2">Bootstrap 學習範例集</p>
+            <h1 class="display-5 fw-bold">歡迎來到我的網站</h1>
+            <p class="lead text-muted">這是一個整合了多種 Bootstrap 練習內容的個人展示頁。</p>
         </div>
-        <h1>歡迎來到我的網站</h1>
-        <p>這是一個簡單的個人網站範例</p>
-        <div class="nav-links">
-            <table>
-                <tr>
-                    <td><a href="./01_my_first_bootstrap.html">Bootstrap範例</a></td>
-                    <td><a href="./02_box.html">Bootstrap區塊範例</a></td>
-                    <td><a href="./03_nav.html">導覽範例</a></td>
-                </tr>
-                <tr>
-                    <td><a href="./04_carousel.html">輪播範例</a></td>
-                    <td><a href="./05_form.html">表單範例</a></td>
-                    <td><a href="./06_iframe.html">內嵌框架範例</a></td>
-                </tr>
-                <tr>
-                    <td><a href="./07_div.html">區塊範例</a></td>
-                    <td><a href="./08_selector.html">選擇器範例</a></td>
-                    <td><a href="./09_css.html">CSS範例</a></td>
-                </tr>
-                <tr>
-                    <td><a href="./10_pseudoclass.html">擬類別範例</a></td>
-                    <td><a href="./11_pseudoelement.html">擬元素範例</a></td>
-                    <td><a href="./12_attributeselector.html">屬性選擇器</a></td>
-                </tr>
-                <tr>
-                    <td><a href="./13_marginandpadding.html">外距與內距</a></td>
-                    <td><a href="./14_blockandinline.html">區塊與行內</a></td>
-                    <td><a href="./15_background.html">背景擺放</a></td>
-                </tr>
-                <tr>
-                    <td><a href="./16_float.html">浮動元素</a></td>
-                    <td><a href="./17_position.html">元素位置</a></td>
-                    <td><a href="./18_flex.html">彈性盒子</a></td>
-                </tr>
-                <tr>
-                    <td><a href="./19_keyframes.html">基本動畫</a></td>
-                    <td><a href="./20_media.html">響應式設計</a></td>
-                    <td></td>
-                </tr>
-            </table>
+
+        <div class="row g-4" aria-label="範例連結">
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm border-0" href="./01_my_first_bootstrap.html">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-dark">Bootstrap 範例</h2>
+                        <p class="card-text text-muted">基礎版型與元件</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm border-0" href="./02_box.html">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-dark">Bootstrap 區塊範例</h2>
+                        <p class="card-text text-muted">盒模型與區塊結構</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm border-0" href="./03_nav.html">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-dark">導覽範例</h2>
+                        <p class="card-text text-muted">導覽列與頁籤設計</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm border-0" href="./04_carousel.html">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-dark">輪播範例</h2>
+                        <p class="card-text text-muted">圖片輪播效果</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm border-0" href="./05_form.html">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-dark">表單範例</h2>
+                        <p class="card-text text-muted">輸入欄位與表單排版</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm border-0" href="./pages/06/index.html">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-dark">後台管理頁面</h2>
+                        <p class="card-text text-muted">學生資料管理入口</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm border-0" href="./07_typography.html">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-dark">文字排版範例</h2>
+                        <p class="card-text text-muted">標題、段落與字體層次</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm border-0" href="./08_color.html">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-dark">色彩與背景範例</h2>
+                        <p class="card-text text-muted">Bootstrap 的 text-bg 類別與背景色示範</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm border-0" href="./09_table.html">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-dark">表格範例</h2>
+                        <p class="card-text text-muted">Bootstrap 表格樣式與 hover 效果</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm border-0" href="./10_img..html">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-dark">圖片範例</h2>
+                        <p class="card-text text-muted">Bootstrap 的圖片展示範例</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm border-0" href="./11_alert.html">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-dark">警告範例</h2>
+                        <p class="card-text text-muted">Bootstrap 的警告訊息範例</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="card h-100 text-decoration-none shadow-sm border-0" href="./12_button.html">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-dark">按鈕範例</h2>
+                        <p class="card-text text-muted">Bootstrap 的按鈕樣式範例</p>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
+    </main>
 </body>
 
 </html>

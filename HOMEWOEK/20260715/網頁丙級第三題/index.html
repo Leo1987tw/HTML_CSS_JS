@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>國家公園介紹網</title>
+</head>
+<body>
+    <main>
+        <div class="top">
+            <a href="./index.html">
+                <img src="./images/park0307.jpg" alt="" class="top-picture">
+            </a>
+        </div>
+        <script>
+            const topImage = [
+                "./images/park0307.jpg", 
+                "./images/park0308.jpg", 
+                "./images/park0309.jpg", 
+                "./images/park0310.jpg", 
+                "./images/park0311.jpg", 
+                "./images/park0312.jpg", 
+                "./images/park0313.jpg", 
+            ];
+
+            let currentIndex = 0;
+            let topPicture = document.querySelector(".top-picture");
+            setInterval(() => {
+                currentIndex++;
+                currentIndex = (currentIndex + topImage.length) % topImage.length;
+                topPicture.src = topImage[currentIndex];
+            }, 1000);
+        </script>
+        <div class="main">
+            <div class="menu">
+                <table>
+                    <tr>
+                        <td>
+                            <a href="./park/yangmingshan.html" target="main">
+                                <img src="./images/park0302.jpg" alt="陽明山國家公園" style="width: 140px; height: 40px; margin: auto;">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 140px; height: 40px; margin: auto;"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="./park/sheipa.html" target="main">
+                                <img src="./images/park0303.jpg" alt="雪霸國家公園" style="width: 140px; height: 40px; margin: auto;">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 140px; height: 40px; margin: auto;"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./images/park0304.jpg" alt="太魯閣國家公園" style="width: 140px; height: 40px; margin: auto;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 140px; height: 40px; margin: auto;"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./images/park0305.jpg" alt="玉山國家公園" style="width: 140px; height: 40px; margin: auto;">
+                        </td>
+                    </tr>
+                </table>
+                <a href="">檔案下載</a>
+            </div>
+            <div class="contain">
+                <marquee behavior="" direction="">歡迎進入國家公園介紹網，本網站有詳細的國家公園介紹喔！</marquee>
+                <iframe src="./main.html" name="main" class="content" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div class="footer">網頁設計及維護：XXOOO、最近更新日期：yyyy/mm/dd</div>
+    </main>
+</body>
+</html>
+
+<!-- <script>
+    document.getElementById("map").addEventListener("click", function(e){
+        alert(`${e.offsetX}, ${e.offsetY}`);
+    });
+</script> -->

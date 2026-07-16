@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 文字排版範例</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <a href="./index.html" class="btn btn-outline-secondary mb-4">← 返回前頁</a>
+
+        <div class="text-center mb-5">
+            <p class="text-uppercase text-primary fw-bold mb-2">Bootstrap 文字排版範例</p>
+            <h1 class="display-6 fw-bold">字體層次與段落展示</h1>
+            <p class="lead text-muted">透過不同標題、段落與引用樣式，讓內容更有閱讀節奏與視覺層次。</p>
+        </div>
+
+        <div class="card shadow-sm border-0 p-4">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-8">
+                        <h2 class="h3">主標題</h2>
+                        <p>這是一段基本的段落內容，用來展示 Bootstrap 的文字排版效果與整體閱讀流。</p>
+
+                        <h3 class="h4 mt-4">次標題</h3>
+                        <p class="text-primary fw-semibold">這段文字使用主色系，方便區分重點與關鍵訊息。</p>
+
+                        <p>在網頁設計中，文字排版不只是讓字看起來整齊，還能有效引導讀者的注意力。</p>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="p-4 rounded-4 bg-light border">
+                            <blockquote class="blockquote mb-0">
+                                <p class="mb-2">排版不只是把字排好，而是讓內容更容易被閱讀與理解。</p>
+                                <footer class="blockquote-footer">來自 Bootstrap 練習</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="row g-4">
+                    <div class="col-12">
+                        <h2 class="h4">常用 Bootstrap 文字類別示範</h2>
+                        <p class="lead">.lead 讓段落更突出</p>
+
+                        <p class="text-start border-bottom pb-2">.text-start 表示文字靠左對齊</p>
+                        <p class="text-center border-bottom pb-2">.text-center 表示文字置中對齊</p>
+                        <p class="text-end border-bottom pb-2">.text-end 表示文字靠右對齊</p>
+                        <p class="text-break border-bottom pb-2">.text-break 防止很長的文字破壞版面，讓內容自然換行並保持整體可讀性。</p>
+                        <a href="#" class="text-decoration-none d-inline-block mb-3">.text-decoration-none 移除連結底線</a>
+                        <p class="text-nowrap border-bottom pb-2">.text-nowrap 表示文字不換行，這一句會維持在同一行。</p>
+                        <p class="text-lowercase border-bottom pb-2">.text-lowercase 表示將文字轉為小寫</p>
+                        <p class="text-uppercase border-bottom pb-2">.text-uppercase 表示將文字轉為大寫</p>
+                        <p class="text-capitalize border-bottom pb-2">.text-capitalize 表示將每個單字的第一個字母轉為大寫</p>
+
+                        <p class="mt-3">
+                            <abbr title="HyperText Markup Language" class="initialism">HTML</abbr>
+                            <span class="ms-2">.initialism 讓 abbr 元素中的文字顯示得略微小一點</span>
+                        </p>
+
+                        <ul class="list-unstyled mt-3">
+                            <li>.list-unstyled 移除預設的列表符號與左邊距</li>
+                            <li>這是沒有圓點的列表範例</li>
+                        </ul>
+
+                        <ul class="list-inline mt-3">
+                            <li class="list-inline-item">.list-inline</li>
+                            <li class="list-inline-item">讓</li>
+                            <li class="list-inline-item">所有列表項目</li>
+                            <li class="list-inline-item">顯示在同一行</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
