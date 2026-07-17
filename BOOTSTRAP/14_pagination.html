@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <title>Bootstrap 分頁範例</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-light">
+    <div class="container py-5">
+        <a href="./index.html" class="btn btn-outline-secondary mb-4">← 返回前頁</a>
+        
+        <div class="text-center mb-5">
+            <p class="text-uppercase text-primary fw-bold mb-2">Bootstrap 分頁範例</p>
+            <h1 class="display-5 fw-bold">分頁與麵包屑導覽</h1>
+            <p class="lead text-muted">Bootstrap 的分頁元件可用於多頁內容的頁碼導覽，而麵包屑則能清楚標示目前頁面在網站中的位置。</p>
+        </div>
+
+        <div class="card shadow-sm border-0 p-4 p-md-5">
+            <h2 class="h4 mb-3">分頁導覽</h2>
+            <p class="text-muted">使用 <code>.pagination</code> 與 <code>.page-item</code> 可以快速建立頁碼選單，讓使用者方便切換不同頁面。</p>
+            <nav aria-label="分頁示範">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">上一頁</a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">下一頁</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <h2 class="h4 mt-4 mb-3">麵包屑導覽</h2>
+            <p class="text-muted">麵包屑能讓使用者一眼知道目前頁面位於網站的哪一層，適合用在產品頁與文章分類頁。</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#">首頁</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">產品</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">夏季系列</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        商品詳情
+
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>
