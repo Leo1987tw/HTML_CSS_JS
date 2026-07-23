@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <title>Bootstrap 20_Utilities 工具介紹</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-light">
+    <div class="container py-5">
+        <!-- 返回按鈕 -->
+        <a href="./index.html" class="btn btn-outline-secondary mb-4">← 返回前頁</a>
+
+        <!-- 網頁主標題區 -->
+        <div class="text-center mb-5">
+            <p class="text-uppercase text-primary fw-bold mb-2">第 20 章課程筆記</p>
+            <h1 class="display-5 fw-bold">Bootstrap 通用工具類別 (Utilities)</h1>
+            <p class="lead text-muted">Utilities 是負責單一設計功能的類別標籤，以下為最常使用的三大工具集：</p>
+        </div>
+
+        <!-- 工具介紹網格區 (Row) —— 這裡使用了 g-4 讓卡片彼此擁有完美的金字塔型舒適間距 -->
+        <div class="row g-4">
+
+            <!-- 📌 第一款工具：間距工具 (Spacing) -->
+            <div class="col-12 col-md-4">
+                <!-- border-0 去掉死板黑線、shadow-sm 加上微陰影、h-100 強制三張卡片高度對齊 -->
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-primary fs-5 me-2">📍</span>
+                            <h4 class="fw-bold text-primary mb-0">間距工具</h4>
+                        </div>
+                        <p class="text-secondary small mb-4">用來調整元件的外邊距 (Margin) 與內襯留白 (Padding)，通用公式為
+                            <code>[屬性][方向]-[大小]</code>。
+                        </p>
+
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item px-0 py-2">
+                                <code class="fw-bold text-dark fs-6">mt-3</code>
+                                <div class="text-muted small">往上方推開 3 等級的外距空間 (Margin-Top)。</div>
+                            </div>
+                            <div class="list-group-item px-0 py-2">
+                                <code class="fw-bold text-dark fs-6">mb-4</code>
+                                <div class="text-muted small">往下方推開 4 等級的外距空間 (Margin-Bottom)。</div>
+                            </div>
+                            <div class="list-group-item px-0 py-2">
+                                <code class="fw-bold text-dark fs-6">py-5</code>
+                                <div class="text-muted small">在元件內部上下兩側空出 5 等級的留白空間 (Padding-Y)。</div>
+                            </div>
+                            <div class="list-group-item px-0 py-2">
+                                <code class="fw-bold text-dark fs-6">px-0</code>
+                                <div class="text-muted small">將元件內部左右兩側的留白直接歸零 (Padding-X)。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📌 第二款工具：排版佈局 (Flexbox) -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-success fs-5 me-2">📐</span>
+                            <h4 class="fw-bold text-success mb-0">排版佈局</h4>
+                        </div>
+                        <p class="text-secondary small mb-4">不用自己計算複雜的寬度，一秒決定網頁內部所有元素的對齊方式與流向。</p>
+
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item px-0 py-2">
+                                <code class="fw-bold text-dark fs-6">d-flex</code>
+                                <div class="text-muted small">將元素宣告為彈性外殼 (Flexbox)，是所有對齊機制的起手式。</div>
+                            </div>
+                            <div class="list-group-item px-0 py-2">
+                                <code class="fw-bold text-dark fs-6">justify-content-center</code>
+                                <div class="text-muted small">讓彈性外殼內的所有物件在水平方向「完美居中對齊」。</div>
+                            </div>
+                            <div class="list-group-item px-0 py-2">
+                                <code class="fw-bold text-dark fs-6">align-items-center</code>
+                                <div class="text-muted small">讓彈性外殼內的所有物件在垂直方向「完美置中對齊」。</div>
+                            </div>
+                            <div class="list-group-item px-0 py-2">
+                                <code class="fw-bold text-dark fs-6">flex-wrap</code>
+                                <div class="text-muted small">當裡面的內容寬度不夠時，允許自動換到下一行，排版不擠壓。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📌 第三款工具：視覺外觀 (Colors & Radius) -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-warning text-dark fs-5 me-2">🎨</span>
+                            <h4 class="fw-bold text-warning-dominant mb-0 text-dark">視覺外觀</h4>
+                        </div>
+                        <p class="text-secondary small mb-4">用來快速上色、調整文字清晰度、或是控制元件角邊的圓潤現代感。</p>
+
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item px-0 py-2">
+                                <code class="fw-bold text-dark fs-6">bg-light / bg-primary</code>
+                                <div class="text-muted small">將背景顏色快速套用為舒適淺灰色或品牌主題藍色。</div>
+                            </div>
+                            <div class="list-group-item px-0 py-2">
+                                <code class="fw-bold text-dark fs-6">text-muted / text-white</code>
+                                <div class="text-muted small">微調文字深度，將文字改為柔和深灰色或純白色。</div>
+                            </div>
+                            <div class="list-group-item px-0 py-2">
+                                <code class="fw-bold text-dark fs-6">border-0</code>
+                                <div class="text-muted small">直接拔掉元件的預設黑色邊框線，讓設計顯得更乾淨。</div>
+                            </div>
+                            <div class="list-group-item px-0 py-2">
+                                <code class="fw-bold text-dark fs-6">rounded-3 / rounded-4</code>
+                                <div class="text-muted small">將元件邊角剪成精緻的大圓角，大幅提升網站科技現代感。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- row 結束 -->
+    </div>
+</body>
+
+</html>
