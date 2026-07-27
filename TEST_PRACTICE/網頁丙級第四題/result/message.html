@@ -1,0 +1,71 @@
+<style>
+    table {
+        margin: auto;
+        text-align: center;
+        background-color: #FFDDDD;
+        border-collapse: collapse;
+    }
+
+    tr {
+        height: 32px;
+    }
+
+    td {
+        border: 1px solid black;
+    }
+
+    form {
+        margin: auto;
+        text-align: center;
+    }
+</style>
+
+<table>
+    <tr>
+        <td style="width: 150px;">公司名稱</td>
+        <td style="width: 350px;">大家來購物有限公司</td>
+    </tr>
+    <tr>
+        <td>公司電子信箱</td>
+        <td>service@test.labor.gov.tw</td>
+    </tr>
+    <tr>
+        <td>服務項目</td>
+        <td>網路購物服務</td>
+    </tr>
+</table>
+
+<br>
+
+<form action="">
+    <table style="background-color: #FFFF99;">
+        <tr>
+            <td style="width: 150px; text-align: center; vertical-align: middle;">
+                <lable for="name">客戶名稱</lable>
+            </td>
+            <td style="width: 350px; text-align: start; vertical-align: middle;">
+                <input type="text" id="name" name="name" size="20" required>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 150px; text-align: center; vertical-align: middle;">
+                <laber for="email">電子信箱</laber>
+            </td>
+            <td style="width: 350px; text-align: start; vertical-align: middle;">
+                <input type="text" id="email" name="email" size="30" required>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 150px; text-align: center; vertical-align: middle;">
+                <laber for="message">意見留言</laber>
+            </td>
+            <td style="width: 350px; text-align: start; vertical-align: middle;">
+                <textarea id="message" name="message" rows="5" cols="30" required></textarea>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <input type="submit" value="送出" style="margin: 10px 5px;" onclick="alert('歡迎菈臨本網站，您的寶貴意見我們會儘速處理與回復，謝謝！')">
+        <input type="reset" value="重置" style="margin: 10px 5px;">
+    </div>
+</form>
