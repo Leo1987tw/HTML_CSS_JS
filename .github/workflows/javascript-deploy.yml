@@ -1,4 +1,4 @@
-name: 🚀 自動外送 javascript 到主機
+name: 🚀 自動外送 javascript 到 javascript
 
 on:
   push:
@@ -17,7 +17,6 @@ jobs:
       run: |
         rm -rf deploy_temp
         mkdir -p deploy_temp/htdocs/front-end-learning/javascript/
-        
         rsync -av --exclude='deploy_temp' --exclude='.git' --exclude='.github' ./javascript/ deploy_temp/htdocs/front-end-learning/javascript/
 
     - name: 📂 步驟3：透過 FTP 安全同步到主機
